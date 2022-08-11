@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/ymzuiku/gowebdev/pkg/execx"
-	"github.com/ymzuiku/gowebdev/pkg/fsx"
+	"github.com/ymzuiku/webdev/pkg/execx"
+	"github.com/ymzuiku/webdev/pkg/fsx"
 )
 
 var GopherjsPort = "8080"

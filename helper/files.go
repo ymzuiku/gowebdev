@@ -3,7 +3,7 @@ package helper
 import (
 	"os"
 
-	"github.com/ymzuiku/gowebdev/pkg/fsx"
+	"github.com/ymzuiku/webdev/pkg/fsx"
 )
 
 var baseHtml = `

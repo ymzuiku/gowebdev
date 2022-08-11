@@ -1,4 +1,4 @@
-module github.com/ymzuiku/gowebdev
+module github.com/ymzuiku/webdev
 
 go 1.18
 

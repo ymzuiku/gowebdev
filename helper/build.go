@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/evanw/esbuild/pkg/api"
-	"github.com/ymzuiku/gowebdev/pkg/execx"
-	"github.com/ymzuiku/gowebdev/pkg/fsx"
+	"github.com/ymzuiku/webdev/pkg/execx"
+	"github.com/ymzuiku/webdev/pkg/fsx"
 )
 
 func Md5String(d []byte) string {

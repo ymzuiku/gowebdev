@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/ymzuiku/gowebdev/helper"
+	"github.com/ymzuiku/webdev/helper"
 )
 
 func main() {
