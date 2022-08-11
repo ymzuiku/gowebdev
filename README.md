@@ -4,21 +4,23 @@ Use gopherjs run web-dev-server
 
 ## cli
 
-- 启动开发服务
-- 提供 gin 代理到 gopherjs
-- 编译工程至生产
-- 开箱 tailwind.css 支持
+- web-develop-server
+- build go to js (use gopherjs), and copy public to dist
+- open box: tailwind.css
+- full stack in your gin server, proxy to gopherjs-server
 
 ## Dev
+
+Run server and, please open `http://127.0.0.1:8000` in your browser
 
 ```sh
 webdev <your-pkg>/main.go
 ```
 
-change port:
+If you need change port:
 
 ```sh
-webdev <your-pkg>/main.go --port 500
+webdev <your-pkg>/main.go --port 5000
 ```
 
 ## Build
@@ -59,7 +61,7 @@ func main() {
 
 ```
 
-## 约定
+## Appointment
 
-- 资源文件夹 public; html 中引入资源: /public/xxxx.js
-- html: index.html
+- assets dir: <your-go-mod>/public
+- root html: <your-go-mod>/index.html
