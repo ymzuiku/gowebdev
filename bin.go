@@ -43,7 +43,7 @@ func main() {
 
 		helper.Proxy(app, gopherJsPort, os.Args[1])
 
-		log.Printf("listen: http://127.0.0.1:" + port)
+		log.Printf("webdev listening: http://127.0.0.1:" + port)
 		if err := app.Run(":" + port); err != nil {
 			fmt.Println("rightos app run err: ", err)
 		}
