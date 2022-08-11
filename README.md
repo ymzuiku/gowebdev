@@ -26,3 +26,36 @@ webdev <your-pkg>/main.go --port 500
 ```sh
 webdev <your-pkg>/main.go --out dist
 ```
+
+## Full stack
+
+Use in gin server
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/ymzuiku/webdev/helper"
+)
+
+func main() {
+	gin.SetMode(gin.ReleaseMode)
+	gin.DisableConsoleColor()
+	app := gin.New()
+
+	if os.Getenv("dev") == "true" {
+    helper.GopherjsPort = "8080"
+	  helper.Proxy(app, "example/client/main.go")
+  }
+
+	log.Printf("listen: http://127.0.0.1:8300")
+	if err := app.Run(":8300"); err != nil {
+		fmt.Println("rightos app run err: ", err)
+	}
+}
+
+```
