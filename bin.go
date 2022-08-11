@@ -35,14 +35,13 @@ func main() {
 			dist = os.Args[i+1]
 		}
 	}
-	helper.GopherjsPort = gopherJsPort
 
 	if dist == "" {
 		gin.SetMode(gin.ReleaseMode)
 		gin.DisableConsoleColor()
 		app := gin.New()
 
-		helper.Proxy(app, os.Args[1])
+		helper.Proxy(app, gopherJsPort, os.Args[1])
 
 		log.Printf("listen: http://127.0.0.1:" + port)
 		if err := app.Run(":" + port); err != nil {

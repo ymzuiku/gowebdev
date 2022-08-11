@@ -13,9 +13,7 @@ import (
 	"github.com/ymzuiku/webdev/pkg/fsx"
 )
 
-var GopherjsPort = "8080"
-
-func Proxy(app *gin.Engine, clienPath string) {
+func Proxy(app *gin.Engine, port, clienPath string) {
 	InitBaseFiles()
 	go func() {
 		execx.Run(context.Background(), nil, "gopherjs", "serve", clienPath)
@@ -50,7 +48,7 @@ func Proxy(app *gin.Engine, clienPath string) {
 		// }
 
 		// 代理
-		remote, err := url.Parse("http://127.0.0.1:" + GopherjsPort + remotePath)
+		remote, err := url.Parse("http://127.0.0.1:" + port + remotePath)
 		if err != nil {
 			fmt.Println("proxy:err", err)
 			ctx.Abort()

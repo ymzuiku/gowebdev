@@ -48,8 +48,7 @@ func main() {
 	app := gin.New()
 
 	if os.Getenv("dev") == "true" {
-    helper.GopherjsPort = "8080"
-	  helper.Proxy(app, "example/client/main.go")
+	  helper.Proxy(app, "8080", "example/client/main.go")
   }
 
 	log.Printf("listen: http://127.0.0.1:8300")
