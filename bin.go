@@ -47,6 +47,6 @@ func main() {
 			fmt.Println("rightos app run err: ", err)
 		}
 	} else {
-		helper.Build(os.Args[1], os.Args[2])
+		helper.Build(os.Args[1], dist)
 	}
 }
