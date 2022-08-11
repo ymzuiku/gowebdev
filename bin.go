@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	log.Printf("__debug__%v", os.Args)
 	l := len(os.Args)
 	if l < 2 {
 		fmt.Printf("args need like:")
