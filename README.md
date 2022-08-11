@@ -58,3 +58,8 @@ func main() {
 }
 
 ```
+
+## 约定
+
+- 资源文件夹 public; html 中引入资源: /public/xxxx.js
+- html: index.html
