@@ -1,11 +1,6 @@
-# bom
+# webdev
 
-go 开发 前端的基础库
-
-## feature
-
-- 更接近 Js 的 BOM API
-- solidjs 映射 + 链式写法
+Use gopherjs run web-dev-server
 
 ## cli
 
@@ -14,8 +9,20 @@ go 开发 前端的基础库
 - 编译工程至生产
 - 开箱 tailwind.css 支持
 
-## example
+## Dev
 
+```sh
+webdev <your-pkg>/main.go
 ```
-make dev
+
+change port:
+
+```sh
+webdev <your-pkg>/main.go --port 500
+```
+
+## Build
+
+```sh
+webdev <your-pkg>/main.go --out dist
 ```
